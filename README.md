@@ -16,5 +16,4 @@
 ### 空间配置器部分
 * 包含文件：Alloc.h、Allocator.h、Construct.h、Alloc.cpp<br>（代码内有注释）
 实现了两级空间配置器:[alloc.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Alloc.h); 实现细节:[implement_detail](https://github.com/fgy1995/FgyTinySTL/tree/master/implement_detail)<br>
-<br>
 * 实现的技术及收获
