@@ -8,7 +8,7 @@
 * 各种博客<br>
 
 ## 实现环境
-* win10
+* win10（后期转到Ubuntu）
 * IDE：CLion
 * 环境：MinGW
 
