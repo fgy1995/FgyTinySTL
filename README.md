@@ -3,6 +3,7 @@
 
 ## 学习资料
 * 侯捷 《STL源码剖析》
+* Stanley B.Lippman 《C++ Primer》（第五版）参考书，哪里语法忘了参考下
 * [zouxiaohang/TinySTL](https://github.com/zouxiaohang/TinySTL)
 * SGI STL源码（有需要自己下载）
 * 各种博客<br>
