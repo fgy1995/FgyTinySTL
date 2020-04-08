@@ -16,5 +16,7 @@
 ### 1.1 空间配置器部分
 * 包含文件：Alloc.h、Allocator.h、Construct.h、Alloc.cpp<br>（代码内有注释）
 实现了两级空间配置器:[alloc.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Alloc.h); 实现细节:[implement_detail/alloc.cpp](https://github.com/fgy1995/FgyTinySTL/tree/master/implement_detail)<br>
-### 1.2 测试结果
+### 1.2 空间配置的流程(自己画的)
+![](https://github.com/fgy1995/FgyTinySTL/blob/master/picture/%E5%88%86%E7%BA%A7%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B.jpg)
+### 1.3 测试结果
 * 使用allocator类对内置类型，内置类型的数组，自定义类，自定义类型的数组进行空间配置以及construct。结果都可以进行正常地配置和construct。
