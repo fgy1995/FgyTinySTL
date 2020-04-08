@@ -8,8 +8,8 @@
 * 各种博客<br>
 
 ## 实现环境
-* win10（后期转到Ubuntu）
-* IDE：CLion
+* win10（前期家里电脑带不动虚拟机，后期回学校转到Ubuntu）
+* IDE：CLion（Ubuntu用Sublime写的）
 * 环境：MinGW
 
 ## 实现过程
