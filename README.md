@@ -22,5 +22,7 @@
 * 使用allocator类对内置类型，内置类型的数组，自定义类，自定义类型的数组进行空间配置以及construct。结果都可以进行正常地配置和construct。
 
 ### 2.1 迭代器与traits技法
-* 包含文件：Iterator.h、TypeTraits.h（代码内有注释）
-shixi
+* 包含文件：Iterator.h、TypeTraits.h（代码内有注释）<br>
+实现了迭代器萃取类型、迭代器的定义: [Iterator.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Iterator.h); 实现了类型的萃取: [TypeTraits.h](https://github.com/fgy1995/FgyTinySTL/blob/master/TypeTraits.h)<br>
+### 2.2 测试结果
+* 测试了原生指针的使用，对于容器迭代器的测试，等到实现容易后再测试。
