@@ -13,6 +13,9 @@
 * IDE：CLion（Ubuntu用Sublime写的）
 * 环境：MinGW
 
+## 经验总结
+* 把看书和写代码遇到的一些问题总结在[myexperience](https://github.com/fgy1995/FgyTinySTL/tree/master/myexperience)<br>
+
 ## 实现过程
 ### 1.1 空间配置器部分
 * 包含文件：Alloc.h、Allocator.h、Construct.h、Alloc.cpp（代码内有注释）<br>
