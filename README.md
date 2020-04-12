@@ -29,4 +29,13 @@
 * 包含文件：Iterator.h、TypeTraits.h（代码内有注释）<br>
 实现了迭代器萃取类型、迭代器的定义: [Iterator.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Iterator.h); 实现了类型的萃取: [TypeTraits.h](https://github.com/fgy1995/FgyTinySTL/blob/master/TypeTraits.h)<br>
 ### 2.2 测试结果
-* 测试了原生指针的使用，对于容器迭代器的测试，等到容器实现后再测试。
+* 测试了原生指针的使用，对于容器迭代器的测试，等到容器实现后再测试。<br>
+### 3.1 vector
+* 包含文件Vector.h、Vector_impl.h、UninitializedFunctions.h、Algorithm.h（代码内有注释）<br>
+vector的声明 [Vector.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Vector.h);<br>
+vector的实现 [implement_detail/Vector_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/implement_detail/Vector_impl.h);<br>
+[Alorithm.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Algorithm.h)，因为vector需要使用一些算法，而目前还没有实现自己的算法，因此先使用SGI STL算法库algorithm.h; <br>
+[UninitializedFunctions.h](https://github.com/fgy1995/FgyTinySTL/blob/master/UninitializedFunctions.h)描述了3个全局函数，用来初始化为配置的空间。<br>
+### 3.2 vector测试结果
+* 使用自定义的vector存储内置数据类型和类类型，并使用各种内置操作均能实现正确结果。<br>
+* 这次没运用自己设计的迭代器，vector的内置迭代器是原生指针。因此对于iterator.h的测试在下一节。<br>
