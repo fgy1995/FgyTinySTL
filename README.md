@@ -39,3 +39,11 @@ vector的实现 [implement_detail/Vector_impl.h](https://github.com/fgy1995/FgyT
 ### 3.2 vector测试结果
 * 使用自定义的vector存储内置数据类型和类类型，并使用各种内置操作均能实现正确结果。<br>
 * 这次没运用自己设计的迭代器，vector的内置迭代器是原生指针。因此对于iterator.h的测试在下一节。<br>
+### 4.1 list
+* 包含文件List.h、List_impl.h、Functional.h<br>
+list的声明 [List.h](https://github.com/fgy1995/FgyTinySTL/blob/master/List.h);<br>
+list的实现 [implement_detail/List_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/implement_detail/List_impl.h);<br>
+一些功能函数，例如排序使用的函数对象 [Functional.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Functional.h);<br>
+### 4.2 list的测试结果
+* 分别使用内置类型和自定义类类型对list进行测试，各种操作均能返回正确结果。<br>
+* 迭代器的设计，list的迭代器里面用一个指针用来执行链表的节点，因此list只需要使用两个头尾迭代器就可以遍历整个链表。SGI STL源码使用双向循环链表进行存储，只需要一个迭代器就可以遍历整个链表。我的设计使用非循环的双向链表，所以需要两个迭代器，要注意区别；但是它们的本质都是一样的。<br>
