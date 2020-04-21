@@ -47,3 +47,5 @@ list的实现 [implement_detail/List_impl.h](https://github.com/fgy1995/FgyTinyS
 ### 4.2 list的测试结果
 * 分别使用内置类型和自定义类类型对list进行测试，各种操作均能返回正确结果。<br>
 * 迭代器的设计，list的迭代器里面用一个指针用来执行链表的节点，因此list只需要使用两个头尾迭代器就可以遍历整个链表。SGI STL源码使用双向循环链表进行存储，只需要一个迭代器就可以遍历整个链表。我的设计使用非循环的双向链表，所以需要两个迭代器，要注意区别；但是它们的本质都是一样的。<br>
+### 4.3 list的函数调用关系
+![](https://github.com/fgy1995/FgyTinySTL/blob/master/picture/List%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%85%B3%E7%B3%BB.jpg)
