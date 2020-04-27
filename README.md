@@ -36,7 +36,7 @@ vector的声明 [Vector.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Vec
 vector的实现 [implement_detail/Vector_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/implement_detail/Vector_impl.h);<br>
 [Alorithm.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Algorithm.h)，因为vector需要使用一些算法，而目前还没有实现自己的算法，因此先使用SGI STL算法库algorithm.h; <br>
 [UninitializedFunctions.h](https://github.com/fgy1995/FgyTinySTL/blob/master/UninitializedFunctions.h)描述了3个全局函数，用来初始化为配置的空间。<br>
-### 3.2 vector测试结果
+### 3.2 vector的测试
 * 使用自定义的vector存储内置数据类型和类类型，并使用各种内置操作均能实现正确结果。<br>
 * 这次没运用自己设计的迭代器，vector的内置迭代器是原生指针。因此对于iterator.h的测试在下一节。<br>
 ### 4.1 list
@@ -44,8 +44,18 @@ vector的实现 [implement_detail/Vector_impl.h](https://github.com/fgy1995/FgyT
 list的声明 [List.h](https://github.com/fgy1995/FgyTinySTL/blob/master/List.h);<br>
 list的实现 [implement_detail/List_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/implement_detail/List_impl.h);<br>
 一些功能函数，例如排序使用的函数对象 [Functional.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Functional.h);<br>
-### 4.2 list的测试结果
+### 4.2 list的测试
 * 分别使用内置类型和自定义类类型对list进行测试，各种操作均能返回正确结果。<br>
 * 迭代器的设计，list的迭代器里面用一个指针用来执行链表的节点，因此list只需要使用两个头尾迭代器就可以遍历整个链表。SGI STL源码使用双向循环链表进行存储，只需要一个迭代器就可以遍历整个链表。我的设计使用非循环的双向链表，所以需要两个迭代器，要注意区别；但是它们的本质都是一样的。<br>
 ### 4.3 list的函数调用关系
 ![](https://github.com/fgy1995/FgyTinySTL/blob/master/picture/List%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%85%B3%E7%B3%BB.jpg)
+<br>
+### 5.1 deque
+* 包含文件Deque.h、Deque_impl.h<br>
+deque的声明[List.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Deque.h);<br>
+deuqe的实现[List_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/implement_detail/Deque_impl.h);<br>
+deque实现了双向队列，它可以从双向分别添加删除元素；deque维护了一个分段的连续空间，所谓分段连续是指通过维护一个map（不是STL的map容器）作为控制器，将不同的分段区间维护到一起。仔细考虑会发现，deque其实是维护了一个一维的指针数组，数组中每一个元素都是一个指针，指向一段连续的内存空间，所有指针指向的内存空间大小都是相同的。在进一步思考，在逻辑上deque其实就是维护了一个二维数组，只不过内部的数据不是连续的。<br>
+deque的迭代器是随机访问迭代器，由于deque是分段连续，所以迭代器的随机访问操作要仔细设计。<br>
+### 5.2 deque的测试
+对deque及其迭代器进行各种操作的测试，均能得到正确结果。<br>
+
