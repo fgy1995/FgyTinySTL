@@ -65,3 +65,10 @@ queue的声明及实现[Queue.h](https://github.com/fgy1995/FgyTinySTL/blob/mast
 * stack和queue都是适配器他们的内部封装了其他的容器，调用容器的操作从而实现了它们的操作；stack和queque内部都默认封装了deque容器，如果想使用其他合适的容器可以在声明时候指定，eg. stack<int,list<int>> st, queue<int,list<int>>等。<br>
 ### 6.2 测试结果
 * 对stack和queue的各种操作均能显示正确结果，此外要注意，stack和queue并没有迭代器，因为它们不需要遍历所有元素，只需要访问头尾元素。<br>
+### 7.1 slist
+* 包含文件SList.h<br>
+slist的声明及实现[SList.h](https://github.com/fgy1995/FgyTinySTL/blob/master/SList.h);<br>
+slist是一个单链表，它并不在STL标准中，但是它一样有着广泛的使用，虽然它的功能可以由list代替，但是它占用的空间比list小，所以在一些场景中，slist要比list好一些。<br>
+另外slist中节点类和迭代器类的实现均采用了继承结构，通过研究这种结构可以为之后rbtree结构打下基础。其实在SGI STL源码中各种类的设计都是采用了继承结构，只是《STL源码剖析》中为了讲解说明，没有这么说。
+### 7.2 slist测试结果
+* 对slist进行各种操作均能正确实现。<br>
