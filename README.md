@@ -57,5 +57,11 @@ deuqe的实现[List_impl.h](https://github.com/fgy1995/FgyTinySTL/blob/master/im
 deque实现了双向队列，它可以从双向分别添加删除元素；deque维护了一个分段的连续空间，所谓分段连续是指通过维护一个map（不是STL的map容器）作为控制器，将不同的分段区间维护到一起。仔细考虑会发现，deque其实是维护了一个一维的指针数组，数组中每一个元素都是一个指针，指向一段连续的内存空间，所有指针指向的内存空间大小都是相同的。在进一步思考，在逻辑上deque其实就是维护了一个二维数组，只不过内部的数据不是连续的。<br>
 deque的迭代器是随机访问迭代器，由于deque是分段连续，所以迭代器的随机访问操作要仔细设计。<br>
 ### 5.2 deque的测试
-对deque及其迭代器进行各种操作的测试，均能得到正确结果。<br>
-
+* 对deque及其迭代器进行各种操作的测试，均能得到正确结果。<br>
+### 6.1 stack、queue ---容器适配器（adapter）
+* 包含文件Stack.h、Queue.h<br>
+stack的声明及实现[Stack.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Stack.h);<br>
+queue的声明及实现[Queue.h](https://github.com/fgy1995/FgyTinySTL/blob/master/Queue.h);<br>
+* stack和queue都是适配器他们的内部封装了其他的容器，调用容器的操作从而实现了它们的操作；stack和queque内部都默认封装了deque容器，如果想使用其他合适的容器可以在声明时候指定，eg. stack<int,list<int>> st, queue<int,list<int>>等。<br>
+### 6.2 测试结果
+* 对stack和queue的各种操作均能显示正确结果，此外要注意，stack和queue并没有迭代器，因为它们不需要遍历所有元素，只需要访问头尾元素。<br>
