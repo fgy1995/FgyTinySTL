@@ -72,3 +72,6 @@ slist是一个单链表，它并不在STL标准中，但是它一样有着广泛
 另外slist中节点类和迭代器类的实现均采用了继承结构，通过研究这种结构可以为之后rbtree结构打下基础。其实在SGI STL源码中各种类的设计都是采用了继承结构，只是《STL源码剖析》中为了讲解说明，没有这么说。
 ### 7.2 slist测试结果
 * 对slist进行各种操作均能正确实现。<br>
+### 8.1 priority_queue
+* 包含文件Priority_queue.h, HeapAlgorithm.h,Utility.h<br>
+优先级队列内部使用vector作为容器，使用堆的算法对vector进行处理，使其可以成为一个堆。并能够执行优先级队列的算法。
